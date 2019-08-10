@@ -52,7 +52,7 @@ class CatFromTextEncoder:
     The logic for the category encoder was written exclusively using tensorflow and scipy.sparse functions.
     The construction of the return matrix is sparse from start to finish.
     '''
-    def __init__(self,**kwargs):
+    def __init__(self):
         self.col_names=[]
         self.feature_names=[]
         self.split='::'
@@ -62,7 +62,6 @@ class CatFromTextEncoder:
         self.fit_dict = {}
         self.tokenizers = {}
         self.transform_mode = "binary"
-        self.update(**kwargs)
 
 
     def fit(self,data):
